@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invigora | Projects</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <!-- Add Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- <h1><span>invi</span>gora</h1> -->
+    <img src="logo.jpeg" alt="invigora">
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." id="searchInput" onkeyup="searchFun()">
+        <button class="search-btn"><i class='bx bx-search'></i></button>
+    </div>
+
+    <div id="container">
+        <button><a href="#">Movie Guide App</a></button>
+        <button><a href="#">Image Search Engine</a></button>
+        <button><a href="#">Text to Speach</a></button>
+        <button><a href="#">Rainning</a></button>
+        <button><a href="#">sn</a></button>
+        <button><a href="#">op</a></button>
+        <button><a href="#">ab</a></button>
+        <button><a href="#">ef</a></button>
+        <button><a href="#">cd</a></button>
+        <button><a href="#">gf</a></button>
+    </div>
+
+
+
+
+<script>
+    function searchFun(){
+        let filter = document.getElementById('searchInput').value.toUpperCase();
+
+        let div = document.getElementById('container');
+
+        let button = div.getElementsByTagName('button');
+
+        for(var i=0; i<button.length; i++){
+            let a = button[i].getElementsByTagName('a')[0];
+
+            let textValue = a.textContent || a.innerHTML;
+
+            if(textValue.toUpperCase().indexOf(filter) > -1){
+                button[i].style.display = '';
+            } else {
+                button[i].style.display = 'none';
+            }
+        }
+    }
+</script>
+
+
+</body>
+
+</html>
